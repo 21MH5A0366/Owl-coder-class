@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+void Takeinput(){
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+}
+int main() {
+    Takeinput();
+    vector<int>A;
+    /*//add
+    A.push_back(10);
+    A.emplace_back(30);
+    A.insert(A.begin()+1,100);*/
+    //A[0]=200; ----> change data in 0 index
+    /*if (find(A.begin(),A.end(),key)!=A.end()){
+        cout<<"present";       ---------------------------> to find a element present in vector
+    }*/
+    
+
+    //binary search(a,a+n,key) --------------->to find element
+
+    /*A.pop_back(); ---------> it removes last
+    A.clear();   ----------> it clear all elements
+    A.erase(A.begin()); ----------> earses the begin element in vector
+    */
+
+   
+    }
+
+      
+}
