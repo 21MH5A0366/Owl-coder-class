@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+void Takeinput(){
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+}
+void setbit(int n, int p){
+    // 12 --> 00001100
+    //   -->00010000---> 00000001<<p
+    int need =1<<p;
+    cout<< (n | need);
+int main() {
+    Takeinput();
+    for(int i=0;i<8;i++){
+        printBinary(i);
+    }
+    //set the bit in given position
+    int a=12;
+    int b=4;
+    setbit(a,b);
+    //unset the bit in given  position
+    int i=3;
+    cout<<(12 & (~(1<<i)));
+    //toggle bit in given position
+    int j=5;
+    int x=15;// 00001111
+    cout<<(x^
+    }
