@@ -1,10 +1,5 @@
 #include<iostream>
 using namespace std;
-void Takeinput(){
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
 }
 void setbit(int n, int p){
     // 12 --> 00001100
@@ -12,7 +7,6 @@ void setbit(int n, int p){
     int need =1<<p;
     cout<< (n | need);
 int main() {
-    Takeinput();
     for(int i=0;i<8;i++){
         printBinary(i);
     }
@@ -28,3 +22,29 @@ int main() {
     int x=15;// 00001111
     cout<<(x^
     }
+    
+    // logic to make upper to lower
+    char a='a';
+    char d=(c | '_');
+    
+    //logic to make lower to upper
+    char a='a';
+    char A=(a & '_');
+    cout<<A;
+    char x=(1<<5);
+    
+    //count set bits
+    int val =15;
+    int Set_Cnt=0;
+    while(val){
+       if(val&1){
+            Set_Cnt++;
+       }
+       val = val >>1;
+    }
+    cout<<Set_Cnt;
+    
+    
+    //
+    
+    
