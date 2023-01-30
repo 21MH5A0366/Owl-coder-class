@@ -1,5 +1,5 @@
 ______subarrays_____
-code TO create thew subarrays ...
+code TO create the subarrays ...
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -21,3 +21,10 @@ int main(){
 		cin>>a[i];
 	}
 	printsubarray(a,n);
+	
+
+
+_________subset_________
+code To create the subset
+
+
