@@ -31,7 +31,7 @@ int main() {
     char a='a';
     char A=(a & '_');
     cout<<A;
-    char x=(1<<5);
+    char x=(1<<5)
     
     //count set bits
     int val =15;
@@ -45,6 +45,21 @@ int main() {
     cout<<Set_Cnt;
     
     
-    //
+    //addition of two numbers with bitwise
     
-    
+class Solution
+{
+    public:
+    int sum(int a , int b)
+    {
+        while(b!=0){
+            int carry=a&b;
+            a=a^b;
+            b=carry<<1;
+        }
+        return a;
+    }
+};
+
+
+  //
