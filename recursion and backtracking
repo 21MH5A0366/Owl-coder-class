@@ -1,4 +1,4 @@
-recursion 
+//recursion 
 
 #include<iostream> //--------------> to check is string palindrome  or not
 using namespace std;
@@ -14,4 +14,7 @@ int main() {
     cout<<check(0,s.size()-1,s);
     
 }  
+
+
+// Backtracking
 
