@@ -1,0 +1,17 @@
+recursion 
+
+#include<iostream> //--------------> to check is string palindrome  or not
+using namespace std;
+
+bool check(int i, int j, string s){
+    if(i >= j) return true;
+    if(s[i]!=s[j]) return false;
+    return check(i+1,j-1,s);
+}
+int main() {
+    Takeinput();
+    string s="MADAM";
+    cout<<check(0,s.size()-1,s);
+    
+}  
+
