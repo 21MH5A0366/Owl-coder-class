@@ -65,3 +65,26 @@ int main() {
       
 }
 
+
+
+.......using two stacks......
+
+        stack<int> S1;
+        stack<int> S2;
+        
+        while(!St.empty()){
+            S1.push(St.top());
+            St.pop();
+        }
+        
+       while(!S1.empty()){
+            S2.push(S1.top());
+            S1.pop();
+        } 
+        
+        while(!S2.empty()){
+            St.push(S2.top());
+            S2.pop();
+        } 
+  }
+
