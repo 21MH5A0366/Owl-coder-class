@@ -1,3 +1,10 @@
+decimal to binary in 30 bit;
+
+for(int i=29;i>=0;i--){
+     cout<<((N>>i&1));
+    }
+
+//
 #include<iostream>
 using namespace std;
 }
