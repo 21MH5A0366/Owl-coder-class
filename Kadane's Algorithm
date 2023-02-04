@@ -1,0 +1,39 @@
+--------> Kadane's Algorithm in cpp.
+
+long long maxSubarraySum(int arr[], int n){
+        int l=0;
+        int g=INT_MIN;
+        for(int i=0;i<n;i++){
+                l=max(arr[i],arr[i]+l);
+                if(g<l) g=l;
+                if(l<0)l=0;
+        }
+        return g;
+    }
+};
+
+
+---------> kadane's Algorithm in python
+
+class Solution:
+    def maxSubArraySum(self,arr,N):
+        sm=0
+        a=0
+        l=[arr[0]]
+        l.append(max(arr))
+        maxi,mini=arr[0],arr[0]
+        for i in range(1,N):
+            #print(arr[i],end=" ")
+            sm=max(maxi+arr[i],mini+arr[i],arr[i])
+            #print(sm,end=" ")
+            mini=min(mini+arr[i],maxi+arr[i],arr[i])
+            #print(mini,end=" ")
+            a=max(sm,mini,a,maxi)
+            maxi=sm
+            #print(a,end="\n")
+            if a!=0:
+                l.append(a)
+        #print(l)
+        return max(l)
+        
+        
