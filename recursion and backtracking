@@ -48,3 +48,38 @@ int main() {
 
 }  
 
+
+//combination sum
+
+#include <bits/stdc++.h>
+using namespace std;
+void combsum(int i,int n,int arr[],vector<int>&ds,int t){
+    if (i==n){
+        if (t==0){
+         for(auto it:ds)cout<<it<<" ";
+            cout<<"\n";
+        }
+        return;
+    }
+    //pick call
+    if(t>=arr[i]){
+        ds.push_back(arr[i]);
+        combsum(i,n,arr,ds,t-arr[i]);
+        ds.pop_back();
+    }
+    //non pick call
+    combsum(i+1,n,arr,ds,t);
+
+}
+int main() {
+    int arr[]={2,3,4,6,7};
+    int n=5; //arr.size();
+    int t=7;
+    vector<int>ds; 
+    combsum(0,n,arr,ds,t);
+
+}  
+
+
+//
+
