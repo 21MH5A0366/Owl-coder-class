@@ -115,5 +115,26 @@ void printcombinations(vector<int>&candidates,int target,vector<int>&ans,vector<
 };
 
 
+// reverse a number using recursion
+
+#include <iostream>
+using namespace std;
+}
+void reverse(string n){
+   if (n < 10) {
+      cout<<n;
+      return;
+   }
+   else{
+      cout<<n%10;
+      reverse(n/10);
+   }
+}
+int main() {
+    int n;
+    cin>>n;
+    reverse(n); 
+}
+
 //
 
