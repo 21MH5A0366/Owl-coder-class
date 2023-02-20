@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+class LinkedList{
+public:
+    struct Node
+    {
+        int data;
+        Node *next;
+        Node(int val){
+            data = val;
+            next = NULL;
+        }
+    };
+    Node *head;
+    Node *tail;
+    LinkedList(){
+        head = NULL;
+        tail = NULL;
+    }
+    void Insert(int x){
+        //creat a new node data,NULL
+        Node *newNode = new Node(x);
+        if(head==NULL){
+            head = newNode;
+            tail = newNode;
+            return;
+        }
+        tail->next = newNode;
+        tail = tail->next;
+    }
+    void Printdata(){
+        Node *temp = head;
+        while(temp){
+            cout<<temp->data<<" ";
+            temp = temp->next;
+        }
+    }
+};
+int main(){
+    LinkedList list;
+    list.Insert(10);
+    list.Insert(20);
+    list.Insert(30);
+    list.Printdata();
+
+}
